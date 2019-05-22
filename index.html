@@ -1,0 +1,115 @@
+<! DOCTYPE html>
+    
+    <html>
+        
+        <title>"Calorie Calculator"</title>
+        <head>
+           <font size="6"><b>Calorie Calculator: Task 1 - Delta WebDev Inductions 2019 - Nithin Balaaji </b></font>
+            <link rel="stylesheet" type="text/css" href="style.css">
+<script src="script_2.js" >
+      </script>
+      
+            
+        </head>
+        
+        <body>
+            
+            
+<div style="padding-left: 20px;">
+    <table>
+      <tr>
+        <td><b>    Name ( Max 12 characters ) </b>   : </td>
+        <td><input type="text" maxlength="15" id="name" onkeypress = "return ((event.charCode >= 65 && ent.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))"  placeholder= "Enter Alphabets Only" ></td>
+      </tr>
+      <tr>
+        <td><b>Height in Cms (Max 3 digits) </b> : </td>
+        <td><input type="text" maxlength="3" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" id="height" placeholder= "Enter Numerals Only" required></td>
+      </tr>
+      <tr>
+        <td><b>Weight in Kgs (Max 3 digits) </b> : </td>
+        <td><input type="text" maxlength="3" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" id="weight" placeholder= "Enter Numerals Only"required></td>
+      </tr>
+      <tr>
+        <td><b>Age (Max 3 digits) </b> : </td>
+        <td><input type="text" maxlength="3" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" id="age" placeholder= "Enter Numerals Only" required></td>
+      </tr>
+      <tr>
+        <td><b>Gender</b> : </td>
+        <td>
+            <input name="gender" type="radio" id="rdoMale" value="Male">
+            <label for="Male">Male</label><br>
+            <input name="gender" type="radio" id="rdoFemale" value="Female">
+            <label for="Female">Female</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="float: right"><input type="submit" onclick="fnCalculate();"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>Calorie Intake Per Day:<span id="spnCalorie"/></b></td>
+      </tr>
+    </table>
+  </div>
+               
+               
+               <br>
+               <br>
+               
+    <div style="padding-left: 20px;" class="input" id="container">
+      
+      <table>
+      <tr>
+        <td><b> Enter Food Item(Max 15 chars)</b> : </td>
+        <td><input type="text" maxlength="15" id="food" onkeypress ="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))"
+    placeholder= "Enter Alphabets Only" required/></td>
+      </tr>
+      <tr>
+        <td><b>Enter Carbs (Max 5 digits)</b> : </td>
+        <td><input type="text" maxlength="5" id="carbs" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" placeholder= "Enter Numerals Only"/></td>
+      </tr>
+      <tr>
+        <td><b>Enter Fats (Max 5 digits) </b> : </td>
+        <td><input type="text" maxlength="5" id="fats" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" placeholder= "Enter Numerals Only"/></td>
+      </tr>
+      <tr>
+        <td><b>Enter Protein (Max 5 digits)</b> : </td>
+        <td><input type="text" maxlength="5" id="prot" onkeypress = "return(event.charCode >=48 && event.charCode <= 57)" placeholder= "Enter Numerals Only"/></td>
+      </tr>
+       <tr>
+        <td></td>
+        <td style="float: right"><button onclick="displayDetails();">Add Item </button></td>
+      </tr>
+         </table>
+        
+    </div>
+    
+    <br>
+    
+            
+            
+    
+
+    
+
+<div style="padding-left: 20px;" >
+
+    <table  cellpadding="11" id="display" >
+        <tr>
+            <th>Food Item</th>
+            <th>Carbs</th>
+            <th>Fats</th>
+            <th>Protein</th>
+             <th>Calories</th>      
+        </tr>
+        
+    </table>
+    </div>
+    <br/>
+    
+    
+    <div class="shadowbox"id="divDisplay" align="right;"></div>
+        
+        
+        </body>
+    </html>
